@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Cart - Sensu Snacks</title>
+  <link href="./bootstrap.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./cart.css">
+</head>
+<body class="bg-light">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="./index.html">Sensu Snacks</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="./index.html">Store</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container py-5">
+    <h1 class="mb-4">🛒 Your Cart</h1>
+    <ul class="list-group mb-3" id="cartList"></ul>
+    <div class="d-flex justify-content-between align-items-center">
+      <h4>Total: $<span id="cartTotal">0.00</span></h4>
+      <a href="./index.html" class="btn btn-secondary">⬅ Back to Store</a>
+    </div>
+  </div>
+
+  <script src="./bootstrap.js"></script>
+  <script src="./cart.js"></script>
+</body>
+</html>
