@@ -1,159 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <script href="./script.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
-    <title>Storefront Sensu Snacks</title>
-    
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sensu Snacks</title>
+  <link rel="stylesheet" href="./bootstrap.css"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" />
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body class="background">
-    <header>
-        <h1 role="banner1">Sensu Snacks</h1>
-        <h3><i>"The snacks you want when hyperfocus activates!"</i></h3>
-        <nav>
-            <ul>
-                <li><a href="#popcorn">Popcorn</a></li>
-                <li><a href="#candies">Freeze Dried Candies</a></li>
-                <li><a href="#drinks">Frozen Drinks</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<body class="bg-light">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Sensu Snacks</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#popcorn">Popcorn</a></li>
+          <li class="nav-item"><a class="nav-link" href="#candies">Candies</a></li>
+          <li class="nav-item"><a class="nav-link" href="#drinks">Drinks</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <button class="btn btn-warning ms-3" id="toggleCart">🛒 Cart</button>
+    </div>
+  </nav>
 
-    <main>
-        <section class="banner">
-            <div class="banner-slide active">
-                <img src="./PopcornBanner_01.png" alt="Popcorn Flavor 1">
-                <div class="banner-text">
-                    <h2>Delicious Popcorn Flavors</h2>
-                    <p>Try our new Theatre Butter Blast and Bourbon Caramel!</p>
-                </div>
-            </div>
-            <div class="banner-slide">
-                <img src="./FreezeDriedCandy_01.jpg" alt="Candy Variety">
-                <div class="banner-text">
-                    <h2>Sweet & Sour Candies</h2>
-                    <p>Explore our wide range of flavors: fruity, sour, rich, and much more!</p>
-                </div>
-            </div>
-            <div class="banner-slide">
-                <img src="./Frappe01.jpg" alt="Refreshing Drinks">
-                <div class="banner-text">
-                    <h2>Refreshing Drinks</h2>
-                    <p>Quench your thirst with our frozen drink collection!</p>
-                </div>
-            </div>
-        </section>
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="cartSidebar">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title">Your Cart</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="list-group" id="cartItems"></ul>
+      <hr />
+      <h5>Total: $<span id="cartTotal">0.00</span></h5>
+    </div>
+  </div>
 
-        <section id="popcorn" class="category">
-            <h2 class="box01">Popcorn Flavors</h2>
-            <div class="product-grid">
-                <div class="product-card">
-                    <img src="./Placeholder_Popcorn.jpg" alt="Theatre Butter Blast Popcorn">
-                    <h3>Theatre Butter Blast</h3>
-                    <p>$5.99</p>
-                </div>
-                <div class="product-card">
-                    <img src="./Placeholder_Popcorn.jpg" alt="Bourbon Caramel Popcorn">
-                    <h3>Bourbon Caramel</h3>
-                    <p>$6.99</p>
-                </div>
-                <div class="product-card">
-                    <img src="./Placeholder_Popcorn.jpg" alt="Classic Kettle Popcorn">
-                    <h3>Classic Kettle</h3>
-                    <p>$6.99</p>
-                </div>
-                <div class="product-card">
-                    <img src="./Placeholder_Popcorn.jpg" alt="Caramel Kettle Popcorn">
-                    <h3>Caramel Kettle</h3>
-                    <p>$6.99</p>
-                </div>
-                <div class="product-card">
-                    <img src="./Placeholder_Popcorn.jpg" alt="Southern Grits">
-                    <h3>Southern Grits</h3>
-                    <p>$6.99</p>
-                </div>
-                <div class="product-card">
-                    <img src="./Placeholder_Popcorn.jpg" alt="Crawfish Boil">
-                    <h3>Crawfish Boil</h3>
-                    <p>$6.99</p>
-                </div>
-            </div>
-        </section>
+  <main class="container py-5">
+    <section class="text-center mb-5">
+      <h1 class="display-4" style="font-family: 'Russo One', sans-serif;">Sensu Snacks</h1>
+      <p class="lead">"The snacks you want when hyperfocus activates!"</p>
+    </section>
 
-        <section id="candies" class="category">
-            <h2>Candies</h2>
-            <div class="product-grid">
-                <div class="product-card">
-                    <img src="./Placeholder_Candy.png" alt="JollyRancher">
-                    <h3>Jolly Rancher</h3>
-                    <p>$3.99</p>
-                </div>
-                <div class="product-card">
-                    <img src="./Placeholder_Candy.png" alt="Chocolate Bars">
-                    <h3>Lemon Heads</h3>
-                    <p>$4.99</p>
-                </div>
-                <div class="product-card">
-                    <img src="./Placeholder_Candy.png" alt="JollyRancher">
-                    <h3>Skittles</h3>
-                    <p>$3.99</p>
-                </div>
-                <div class="product-card">
-                    <img src="./Placeholder_Candy.png" alt="Chocolate Bars">
-                    <h3>Classic Coffee Bites</h3>
-                    <p>$4.99</p>
-                </div>
-                <div class="product-card">
-                    <img src="./Placeholder_Candy.png" alt="JollyRancher">
-                    <h3>Mocha Coffee Bites</h3>
-                    <p>$3.99</p>
-                </div>
-                <div class="product-card">
-                    <img src="./Placeholder_Candy.png" alt="Chocolate Bars">
-                    <h3>Fruit Roll-Ups</h3>
-                    <p>$4.99</p>
-                </div>
-            </div>
-        </section>
+    <section id="popcorn" class="mb-5">
+      <h2>Popcorn Flavors</h2>
+      <div class="row" id="popcornProducts"></div>
+    </section>
+    <section id="candies" class="mb-5">
+      <h2>Candies</h2>
+      <div class="row" id="candiesProducts"></div>
+    </section>
+    <section id="drinks" class="mb-5">
+      <h2>Drinks</h2>
+      <div class="row" id="drinksProducts"></div>
+    </section>
+  </main>
 
-        <section id="drinks" class="category">
-            <h2>Drinks</h2>
-            <div class="product-grid">
-                <div class="product-card">
-                    <img src="./Placeholder_Cup.jpg" alt="Exotic Juices">
-                    <h3>❄️ Mocha Frappe ❄️</h3>
-                    <p>$2.99</p>
-                </div>
-                <div class="product-card">
-                    <img src="./Placeholder_Cup.jpg" alt="Sparkling Sodas">
-                    <h3>❄️ Matcha ❄️</h3>
-                    <p>$1.99</p>
-                </div>
-                <div class="product-card">
-                    <img src="./Placeholder_Cup.jpg" alt="Exotic Juices">
-                    <h3>❄️ Sippy Mud ❄️</h3>
-                    <p>$2.99</p>
-                </div>
-                <div class="product-card">
-                    <img src="./Placeholder_Cup.jpg" alt="Sparkling Sodas">
-                    <h3>❄️ Lemonade ❄️</h3>
-                    <p>$1.99</p>
-                </div>
-            </div>
-        </section>
-    </main>
+  <footer id="contact" class="bg-dark text-white text-center py-4">
+    <h4>Contact Us</h4>
+    <p>Email: name@email.com | Phone: (123) 456-7890</p>
+  </footer>
 
-    <footer id="contact">
-        <h2>Contact Us</h2>
-        <p>Email: name@email.com</p>
-        <p>Phone: (123) 456-7890</p>
-    </footer>
-
+  <script src="#"></script>
+  <script src="./script.js"></script>
+  <script src="./bootstrap.js"></script>
 </body>
 </html>
