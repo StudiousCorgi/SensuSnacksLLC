@@ -23,7 +23,10 @@
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
       </div>
-      <button class="btn btn-warning ms-3" href="cart.html" id="toggleCart">🛒 Cart</button>
+      <button class="btn btn-warning ms-3 position-relative" id="toggleCart" href="./cart.html">
+        🛒 Cart
+        <span id="cartCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="display: none;">0</span>
+      </button>
     </div>
   </nav>
 
@@ -47,6 +50,7 @@
 
     <section id="popcorn" class="mb-5">
       <h2>Popcorn Flavors</h2>
+<!--row 1-->
       <div class="row">
         <div class="col-md-4 mb-4">
           <div class="card h-100 shadow-sm">
@@ -94,7 +98,7 @@
             </div>
           </div>
         </div>
-/*row 2*/
+<!--row 2-->
         <div class="row">
           <div class="col-md-4 mb-4">
             <div class="card h-100 shadow-sm">
@@ -142,7 +146,7 @@
               </div>
             </div>
           </div>
-/*row 3*/
+<!--row 3-->
         <div class="row">
           <div class="col-md-4 mb-4">
             <div class="card h-100 shadow-sm">
@@ -190,7 +194,7 @@
                </div>
              </div>
            </div>
-/*row 4*/
+<!--row 4-->
            <div class="row">
              <div class="col-md-4 mb-4">
                <div class="card h-100 shadow-sm">
@@ -238,6 +242,7 @@
                   </div>
                 </div>
               </div>
+<!--row 5-->
     </section>
            
 
@@ -248,8 +253,105 @@
     </section>
     <section id="candies" class="mb-5">
       <h2>Candies</h2>
+<!--row 1-->
+        <div class="row" id="candiesProducts"></div>
+          <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm">
+              <img src="./Placeholder_Candy.png" class="card-img-top" alt="#" />
+              <div class="card-body">
+                <h5 class="card-title">#</h5>
+                  <p class="card-text">$5.00</p>
+                    <div class="input-group mb-3">
+                    <input type="number" class="form-control quantity-input" value="1" min="1">
+                      <button class="btn btn-primary add-to-cart" data-name="#" data-price="5.00">
+                        Add to Cart
+                      </button>
+                    </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm">
+              <img src="./Placeholder_Candy.png" class="card-img-top" alt="#" />
+              <div class="card-body">
+                <h5 class="card-title">#</h5>
+                <p class="card-text">$5.00</p>
+                  <div class="input-group mb-3">
+                    <input type="number" class="form-control quantity-input" value="1" min="1">
+                    <button class="btn btn-primary add-to-cart" data-name="#" data-price="5.00">
+                    Add to Cart
+                    </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm">
+              <img src="./Placeholder_Candy.png" class="card-img-top" alt="#" />
+              <div class="card-body">
+                <h5 class="card-title">#</h5>
+                <p class="card-text">$5.00</p>
+                <div class="input-group mb-3">
+                  <input type="number" class="form-control quantity-input" value="1" min="1">
+                  <button class="btn btn-primary add-to-cart" data-name="#" data-price="5.00">
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+<!--row 2-->
       <div class="row" id="candiesProducts"></div>
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow-sm">
+            <img src="./Placeholder_Candy.png" class="card-img-top" alt="#" />
+            <div class="card-body">
+              <h5 class="card-title">#</h5>
+              <p class="card-text">$5.00</p>
+              <div class="input-group mb-3">
+                <input type="number" class="form-control quantity-input" value="1" min="1">
+                <button class="btn btn-primary add-to-cart" data-name="#" data-price="5.00">
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      <div id="candiesProducts"></div>
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow-sm">
+            <img src="./Placeholder_Candy.png" class="card-img-top" alt="#" />
+            <div class="card-body">
+              <h5 class="card-title">#</h5>
+              <p class="card-text">$5.00</p>
+              <div class="input-group mb-3">
+                <input type="number" class="form-control quantity-input" value="1" min="1">
+                <button class="btn btn-primary add-to-cart" data-name="#" data-price="5.00">
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="candiesProducts"></div>
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow-sm">
+            <img src="./Placeholder_Candy.png" class="card-img-top" alt="#" />
+            <div class="card-body">
+              <h5 class="card-title">#</h5>
+              <p class="card-text">$5.00</p>
+              <div class="input-group mb-3">
+                <input type="number" class="form-control quantity-input" value="1" min="1">
+                <button class="btn btn-primary add-to-cart" data-name="#" data-price="5.00">
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
     </section>
+    
+    
     <section id="drinks" class="mb-5">
       <h2>Drinks</h2>
       <div class="row" id="drinksProducts"></div>
