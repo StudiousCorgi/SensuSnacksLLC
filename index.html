@@ -1,371 +1,189 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sensu Snacks</title>
-  <link rel="stylesheet" href="./bootstrap.css"/>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" />
-  <link rel="stylesheet" href="style.css" />
+  <title>Sensu Snacks - Power Up Your Cravings</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Russo+One&family=Bangers&display=swap" />
+  <link rel="stylesheet" href="css/bootstrap.css" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
-<body class="bg-light">
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Sensu Snacks</a>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark shadow-lg">
+    <div class="container">
+      <a class="navbar-brand anime-logo" href="#">Sensu Snacks</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
+        <ul class="navbar-nav ms-auto text-uppercase">
           <li class="nav-item"><a class="nav-link" href="#popcorn">Popcorn</a></li>
-          <li class="nav-item"><a class="nav-link" href="#candies">Candies</a></li>
-          <li class="nav-item"><a class="nav-link" href="#drinks">Drinks</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="#candy">Freeze-Dried</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
         </ul>
       </div>
-      <button class="btn btn-warning ms-3 position-relative" id="toggleCart" href="./cart.html">
-        🛒 Cart
-        <span id="cartCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="display: none;">0</span>
-      </button>
     </div>
   </nav>
 
-  <div class="offcanvas offcanvas-end" tabindex="-1" id="cartSidebar">
-    <div class="offcanvas-header">
-      <h5 class="offcanvas-title">Your Cart</h5>
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  <header class="hero-section text-white text-center d-flex align-items-center justify-content-center">
+    <div>
+      <h1 class="display-3">Power-Up Your Cravings!</h1>
+      <p class="lead">Bold Flavors. Shonen Spirit.</p>
+      <a href="#popcorn" class="btn btn-warning btn-lg shadow">Shop Now</a>
     </div>
-    <div class="offcanvas-body">
-      <ul class="list-group" id="cartItems"></ul>
-      <hr />
-      <h5>Total: $<span id="cartTotal">0.00</span></h5>
-    </div>
-  </div>
+  </header>
 
-  <main class="container py-5">
-    <section class="text-center mb-5">
-      <h1 class="display-4" style="font-family: 'Russo One', sans-serif;">Sensu Snacks</h1>
-      <p class="lead">"The snacks you want when hyperfocus activates!"</p>
-    </section>
-
-    <section id="popcorn" class="mb-5">
-      <h2>Popcorn Flavors</h2>
-<!--row 1-->
-      <div class="row">
-        <div class="col-md-4 mb-4">
-          <div class="card h-100 shadow-sm">
-            <img src="./images/Placeholder_Popcorn.jpg" class="card-img-top" alt="Theatre Butter" />
-            <div class="card-body">
-              <h5 class="card-title">Theatre Butter</h5>
-              <p class="card-text">$5.99</p>
-              <div class="input-group mb-3">
-                <input type="number" class="form-control quantity-input" value="1" min="1">
-                <button class="btn btn-primary add-to-cart" data-name="Theatre Butter" data-price="5.99">
-                  Add to Cart
-                </button>
-              </div>
-            </div>
+  <section id="popcorn" class="container my-5">
+    <h2 class="section-title">🔥 Popcorn Combos</h2>
+    <div class="row g-4">
+      <!-- Sample Card -->
+      <div class="col-md-4">
+        <div class="card snack-card">
+          <img src="images/Placeholder_Popcorn.jpg" class="card-img-top" alt="Popcorn">
+          <div class="card-body">
+            <h5 class="card-title">Kamehameha Caramel</h5>
+            <p class="card-text">A wave of sweet buttery caramel that hits like a blast.</p>
+            <a href="#" class="btn btn-primary w-100">Add to Cart</a>
           </div>
         </div>
-        <div class="col-md-4 mb-4">
-          <div class="card h-100 shadow-sm">
-            <img src="./images/Placeholder_Popcorn.jpg" class="card-img-top" alt="Caramel Kettle" />
-            <div class="card-body">
-              <h5 class="card-title">Caramel Kettle</h5>
-              <p class="card-text">$5.99</p>
-              <div class="input-group mb-3">
-                <input type="number" class="form-control quantity-input" value="1" min="1">
-                <button class="btn btn-primary add-to-cart" data-name="Caramel Kettle" data-price="5.99">
-                  Add to Cart
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-          <div class="col-md-4 mb-4">
-            <div class="card h-100 shadow-sm">
-              <img src="./images/Placeholder_Popcorn.jpg" class="card-img-top" alt="Double Cheddar" />
-              <div class="card-body">
-                <h5 class="card-title">Double Cheddar</h5>
-                <p class="card-text">$5.99</p>
-                <div class="input-group mb-3">
-                  <input type="number" class="form-control quantity-input" value="1" min="1">
-                  <button class="btn btn-primary add-to-cart" data-name="Double Cheddar" data-price="5.99">
-                    Add to Cart
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-<!--row 2-->
-        <div class="row">
-          <div class="col-md-4 mb-4">
-            <div class="card h-100 shadow-sm">
-              <img src="./images/Placeholder_Popcorn.jpg" class="card-img-top" alt=>"Buffalo Ranch" />
-              <div class="card-body">
-                <h5 class="card-title">Buffalo Ranch</h5>
-                <p class="card-text">$5.99</p>
-                <div class="input-group mb-3">
-                  <input type="number" class="form-control quantity-input" value="1" min="1">
-                  <button class="btn btn-primary add-to-cart" data-name="Buffalo Ranch" data-price="5.99">
-                    Add to Cart
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-4">
-            <div class="card h-100 shadow-sm">
-              <img src="./images/Placeholder_Popcorn.jpg" class="card-img-top" alt="Cheesy Buffalo Wings" />
-              <div class="card-body">
-                <h5 class="card-title">Cheesy Buffalo Wings</h5>
-                <p class="card-text">$5.99</p>
-                <div class="input-group mb-3">
-                  <input type="number" class="form-control quantity-input" value="1" min="1">
-                  <button class="btn btn-primary add-to-cart" data-name="Cheesy Buffalo Wings" data-price="5.99">
-                    Add to Cart
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-            <div class="col-md-4 mb-4">
-              <div class="card h-100 shadow-sm">
-                <img src="./images/Placeholder_Popcorn.jpg" class="card-img-top" alt="Spicy Dill Pickle" />
-                <div class="card-body">
-                  <h5 class="card-title">Spicy Dill Pickle</h5>
-                  <p class="card-text">$5.99</p>
-                  <div class="input-group mb-3">
-                    <input type="number" class="form-control quantity-input" value="1" min="1">
-                    <button class="btn btn-primary add-to-cart" data-name="Spicy Dill Pickle" data-price="5.99">
-                      Add to Cart
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-<!--row 3-->
-        <div class="row">
-          <div class="col-md-4 mb-4">
-            <div class="card h-100 shadow-sm">
-              <img src="./images/Placeholder_Popcorn.jpg" class="card-img-top" alt="White Cheddar" />
-              <div class="card-body">
-                <h5 class="card-title">White Cheddar</h5>
-                <p class="card-text">$5.99</p>
-                <div class="input-group mb-3">
-                  <input type="number" class="form-control quantity-input" value="1" min="1">                    
-                  <button class="btn btn-primary add-to-cart" data-name="White Cheddar" data-price="5.99">
-                      Add to Cart
-                   </button>
-                 </div>
-               </div>
-             </div>
-           </div>
-           <div class="col-md-4 mb-4">
-             <div class="card h-100 shadow-sm">
-               <img src="./images/Placeholder_Popcorn.jpg" class="card-img-top" alt="Southern Gritt" />
-               <div class="card-body">
-                 <h5 class="card-title">Southern Gritt</h5>
-                 <p class="card-text">$5.99</p>
-                 <div class="input-group mb-3">
-                   <input type="number" class="form-control quantity-input" value="1" min="1">
-                   <button class="btn btn-primary add-to-cart" data-name="Southern Gritt" data-price="5.99">
-                     Add to Cart
-                  </button>
-                 </div>
-               </div>
-             </div>
-           </div>
-             <div class="col-md-4 mb-4">
-               <div class="card h-100 shadow-sm">
-                 <img src="./images/Placeholder_Popcorn.jpg" class="card-img-top" alt="Crawfish Boil" />
-                 <div class="card-body">
-                   <h5 class="card-title">Crawfish Boil</h5>
-                   <p class="card-text">$5.99</p>
-                   <div class="input-group mb-3">
-                     <input type="number" class="form-control quantity-input" value="1" min="1">
-                     <button class="btn btn-primary add-to-cart" data-name="Crawfish Boil" data-price="5.99">
-                       Add to Cart
-                     </button>
-                   </div>
-                 </div>
-               </div>
-             </div>
-           </div>
-<!--row 4-->
-           <div class="row">
-             <div class="col-md-4 mb-4">
-               <div class="card h-100 shadow-sm">
-                 <img src="./images/Placeholder_Popcorn.jpg" class="card-img-top" alt="Cinnamon Toast" />
-                 <div class="card-body">
-                   <h5 class="card-title">Cinnamon Toast</h5>
-                   <p class="card-text">$5.99</p>
-                   <div class="input-group mb-3">
-                     <input type="number" class="form-control quantity-input" value="1" min="1">                    
-                     <button class="btn btn-primary add-to-cart" data-name="Cinnamon Toast" data-price="5.99">
-                         Add to Cart
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4 mb-4">
-                <div class="card h-100 shadow-sm">
-                  <img src="./images/Placeholder_Popcorn.jpg" class="card-img-top" alt="Chocolate Drizzle" />
-                  <div class="card-body">
-                    <h5 class="card-title">Chocolot Drizzle</h5>
-                    <p class="card-text">$5.99</p>
-                    <div class="input-group mb-3">
-                      <input type="number" class="form-control quantity-input" value="1" min="1">
-                      <button class="btn btn-primary add-to-cart" data-name="Chocolate Drizzle" data-price="5.99">
-                        Add to Cart
-                     </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-                <div class="col-md-4 mb-4">
-                  <div class="card h-100 shadow-sm">
-                    <img src="./images/Placeholder_Popcorn.jpg" class="card-img-top" alt="Pop'n'Fruit" />
-                    <div class="card-body">
-                      <h5 class="card-title">Pop'n'Fruit</h5>
-                      <p class="card-text">$5.99</p>
-                      <div class="input-group mb-3">
-                        <input type="number" class="form-control quantity-input" value="1" min="1">
-                        <button class="btn btn-primary add-to-cart" data-name="Pop'n'Fruit" data-price="5.99">
-                          Add to Cart
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-<!--row 5-->
-    </section>
-           
-
-            
-
-
       </div>
-    </section>
-    <section id="candies" class="mb-5">
-      <h2>Candies</h2>
-<!--row 1-->
-        <div class="row" id="candiesProducts"></div>
-          <div class="col-md-4 mb-4">
-            <div class="card h-100 shadow-sm">
-              <img src="./images/Placeholder_Candy.png" class="card-img-top" alt="#" />
-              <div class="card-body">
-                <h5 class="card-title">#</h5>
-                  <p class="card-text">$5.00</p>
-                    <div class="input-group mb-3">
-                    <input type="number" class="form-control quantity-input" value="1" min="1">
-                      <button class="btn btn-primary add-to-cart" data-name="#" data-price="5.00">
-                        Add to Cart
-                      </button>
-                    </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-4">
-            <div class="card h-100 shadow-sm">
-              <img src="./images/Placeholder_Candy.png" class="card-img-top" alt="#" />
-              <div class="card-body">
-                <h5 class="card-title">#</h5>
-                <p class="card-text">$5.00</p>
-                  <div class="input-group mb-3">
-                    <input type="number" class="form-control quantity-input" value="1" min="1">
-                    <button class="btn btn-primary add-to-cart" data-name="#" data-price="5.00">
-                    Add to Cart
-                    </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-4">
-            <div class="card h-100 shadow-sm">
-              <img src="./images/Placeholder_Candy.png" class="card-img-top" alt="#" />
-              <div class="card-body">
-                <h5 class="card-title">#</h5>
-                <p class="card-text">$5.00</p>
-                <div class="input-group mb-3">
-                  <input type="number" class="form-control quantity-input" value="1" min="1">
-                  <button class="btn btn-primary add-to-cart" data-name="#" data-price="5.00">
-                    Add to Cart
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-<!--row 2-->
-      <div class="row" id="candiesProducts"></div>
-        <div class="col-md-4 mb-4">
-          <div class="card h-100 shadow-sm">
-            <img src="./images/Placeholder_Candy.png" class="card-img-top" alt="#" />
-            <div class="card-body">
-              <h5 class="card-title">#</h5>
-              <p class="card-text">$5.00</p>
-              <div class="input-group mb-3">
-                <input type="number" class="form-control quantity-input" value="1" min="1">
-                <button class="btn btn-primary add-to-cart" data-name="#" data-price="5.00">
-                  Add to Cart
-                </button>
-              </div>
-            </div>
+      <div class="col-md-4">
+        <div class="card snack-card">
+          <img src="images/Placeholder_Popcorn.jpg" class="card-img-top" alt="Popcorn">
+          <div class="card-body">
+            <h5 class="card-title">Butter Bomber</h5>
+            <p class="card-text">A wave of sweet buttery caramel that hits like a blast.</p>
+            <a href="#" class="btn btn-primary w-100">Add to Cart</a>
           </div>
         </div>
-      <div id="candiesProducts"></div>
-        <div class="col-md-4 mb-4">
-          <div class="card h-100 shadow-sm">
-            <img src="./images/Placeholder_Candy.png" class="card-img-top" alt="#" />
-            <div class="card-body">
-              <h5 class="card-title">#</h5>
-              <p class="card-text">$5.00</p>
-              <div class="input-group mb-3">
-                <input type="number" class="form-control quantity-input" value="1" min="1">
-                <button class="btn btn-primary add-to-cart" data-name="#" data-price="5.00">
-                  Add to Cart
-                </button>
-              </div>
-            </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card snack-card">
+          <img src="images/Placeholder_Popcorn.jpg" class="card-img-top" alt="Popcorn">
+          <div class="card-body">
+            <h5 class="card-title">Kamehameha Caramel</h5>
+            <p class="card-text">A wave of sweet buttery caramel that hits like a blast.</p>
+            <a href="#" class="btn btn-primary w-100">Add to Cart</a>
           </div>
         </div>
-        <div id="candiesProducts"></div>
-        <div class="col-md-4 mb-4">
-          <div class="card h-100 shadow-sm">
-            <img src="./images/Placeholder_Candy.png" class="card-img-top" alt="#" />
-            <div class="card-body">
-              <h5 class="card-title">#</h5>
-              <p class="card-text">$5.00</p>
-              <div class="input-group mb-3">
-                <input type="number" class="form-control quantity-input" value="1" min="1">
-                <button class="btn btn-primary add-to-cart" data-name="#" data-price="5.00">
-                  Add to Cart
-                </button>
-              </div>
-            </div>
+      </div>
+    </div>
+    <div class="row g-4">
+      <!-- Sample Card -->
+      <div class="col-md-4">
+        <div class="card snack-card">
+          <img src="images/Placeholder_Popcorn.jpg" class="card-img-top" alt="Popcorn">
+          <div class="card-body">
+            <h5 class="card-title">Kamehameha Caramel</h5>
+            <p class="card-text">A wave of sweet buttery caramel that hits like a blast.</p>
+            <a href="#" class="btn btn-primary w-100">Add to Cart</a>
           </div>
         </div>
-    </section>
-    
-    
-    <section id="drinks" class="mb-5">
-      <h2>Drinks</h2>
-      <div class="row" id="drinksProducts"></div>
-    </section>
-  </main>
+      </div>
+      <div class="col-md-4">
+        <div class="card snack-card">
+          <img src="images/Placeholder_Popcorn.jpg" class="card-img-top" alt="Popcorn">
+          <div class="card-body">
+            <h5 class="card-title">Butter Bomber</h5>
+            <p class="card-text">A wave of sweet buttery caramel that hits like a blast.</p>
+            <a href="#" class="btn btn-primary w-100">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card snack-card">
+          <img src="images/Placeholder_Popcorn.jpg" class="card-img-top" alt="Popcorn">
+          <div class="card-body">
+            <h5 class="card-title">Kamehameha Caramel</h5>
+            <p class="card-text">A wave of sweet buttery caramel that hits like a blast.</p>
+            <a href="#" class="btn btn-primary w-100">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <footer id="contact" class="bg-dark text-white text-center py-4">
-    <h4>Contact Us</h4>
-    <p>Email: name@yahoo.com | Phone: (228) 596-3282</p>
+  <section id="candy" class="container my-5">
+    <h2 class="section-title">🍬 Freeze-Dried Blasts</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card snack-card">
+          <img src="images/Placeholder_Candy.png" class="card-img-top" alt="Freeze-Dried Candy">
+          <div class="card-body">
+            <h5 class="card-title">Ultra Gummy Crunch</h5>
+            <p class="card-text">Classic gummies, superpowered with freeze-dried crunch!</p>
+            <a href="#" class="btn btn-primary w-100">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card snack-card">
+          <img src="images/Placeholder_Candy.png" class="card-img-top" alt="Freeze-Dried Candy">
+          <div class="card-body">
+            <h5 class="card-title">Ultra Gummy Crunch</h5>
+            <p class="card-text">Classic gummies, superpowered with freeze-dried crunch!</p>
+            <a href="#" class="btn btn-primary w-100">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card snack-card">
+          <img src="images/Placeholder_Candy.png" class="card-img-top" alt="Freeze-Dried Candy">
+          <div class="card-body">
+            <h5 class="card-title">Ultra Gummy Crunch</h5>
+            <p class="card-text">Classic gummies, superpowered with freeze-dried crunch!</p>
+            <a href="#" class="btn btn-primary w-100">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card snack-card">
+          <img src="images/Placeholder_Candy.png" class="card-img-top" alt="Freeze-Dried Candy">
+          <div class="card-body">
+            <h5 class="card-title">Ultra Gummy Crunch</h5>
+            <p class="card-text">Classic gummies, superpowered with freeze-dried crunch!</p>
+            <a href="#" class="btn btn-primary w-100">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card snack-card">
+          <img src="images/Placeholder_Candy.png" class="card-img-top" alt="Freeze-Dried Candy">
+          <div class="card-body">
+            <h5 class="card-title">Ultra Gummy Crunch</h5>
+            <p class="card-text">Classic gummies, superpowered with freeze-dried crunch!</p>
+            <a href="#" class="btn btn-primary w-100">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card snack-card">
+          <img src="images/Placeholder_Candy.png" class="card-img-top" alt="Freeze-Dried Candy">
+          <div class="card-body">
+            <h5 class="card-title">Ultra Gummy Crunch</h5>
+            <p class="card-text">Classic gummies, superpowered with freeze-dried crunch!</p>
+            <a href="#" class="btn btn-primary w-100">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="bg-dark text-white text-center py-5">
+    <div class="container">
+      <h2>About Sensu Snacks</h2>
+      <p>Born from anime obsessions and snack cravings. Our mission? Fuel your power level—one crunch at a time.</p>
+    </div>
+  </section>
+
+  <footer class="text-white bg-black text-center py-3">
+    <p>© 2025 Sensu Snacks LLC | Designed with passion and popcorn.</p>
   </footer>
 
-
-
-  <script src="./js/script.js"></script>
-  <script src="./js/bootstrap.js"></script>
+  <script src="js/bootstrap.js"></script>
 </body>
 </html>
